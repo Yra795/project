@@ -1,3 +1,4 @@
+/* 
 .grid{
     display: grid;
     grid-template-columns: 100px 1fr 2fr;
@@ -6,10 +7,45 @@
     grid-template-columns: repeat(12,1fr);
     row-gap: 20px;
     column-gap: 10px;
+    grid-template-areas: ;
 }
 .blok{
     background-color: rgb(136, 136, 190);
     border: 2px solid black;
     grid-column: 1/-1;
     grid-row: 1/2;
+} */
+
+
+/* .grid{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 70px repeat(2,1fr);
+    grid-template-areas: 
+    "header header ."
+    "aside main main"
+    "aside main main";
+    gap: 10px;
 }
+header{
+    grid-area: main;
+    background-color: chartreuse;
+}
+aside{
+    grid-area: aside;
+    background-color: coral;
+}
+main{
+    grid-area: header;
+    background-color: cornflowerblue;
+} */
+
+.blok{
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    box-shadow: inset 1px 1px black, 0 4px 8px 16px rgba(0,0,0,0.75);
+    box-shadow: -2px -2px 4 rgba(151, 84, 84, 0.15) 2px 2px 6px rgba(110, 67, 67, 0.75);
+}
+
