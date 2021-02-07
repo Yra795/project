@@ -1,0 +1,15 @@
+.grid{
+    display: grid;
+    grid-template-columns: 100px 1fr 2fr;
+    height: 100vh;
+    grid-template-rows: 100px 1fr;
+    grid-template-columns: repeat(12,1fr);
+    row-gap: 20px;
+    column-gap: 10px;
+}
+.blok{
+    background-color: rgb(136, 136, 190);
+    border: 2px solid black;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+}
