@@ -1,10 +1,10 @@
-/* 
-.grid{
+
+/* .grid{
     display: grid;
     grid-template-columns: 100px 1fr 2fr;
     height: 100vh;
-    grid-template-rows: 100px 1fr;
-    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
     row-gap: 20px;
     column-gap: 10px;
     grid-template-areas: ;
@@ -14,7 +14,7 @@
     border: 2px solid black;
     grid-column: 1/-1;
     grid-row: 1/2;
-} */
+}  */
 
 
 /* .grid{
@@ -41,11 +41,59 @@ main{
     background-color: cornflowerblue;
 } */
 
-.blok{
+/* .blok{
     width: 400px;
     height: 400px;
     background-color: white;
     box-shadow: inset 1px 1px black, 0 4px 8px 16px rgba(0,0,0,0.75);
     box-shadow: -2px -2px 4 rgba(151, 84, 84, 0.15) 2px 2px 6px rgba(110, 67, 67, 0.75);
+} */
+
+.blok-A{
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    margin: 20px;
+    /* transform: translate(10px,100px) scale(2); */
 }
 
+
+.blok-B{
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    margin: 20px;
+    /* transform: translate(100px,100px) rotate(15deg); */
+    
+}
+
+.blok-C{
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    margin: 20px;
+    /* transform: translate(150px,100px) skew(9rad); */
+    /* animation: slide 1s ease-in-out both; */
+    
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid gray;
+    border-top: 5px solid red;
+    animation: slide 1s ease-in-out infinite;
+}
+
+
+
+
+
+.blok-C:hover{
+    animation: slide 1s ease-in-out both;
+}
+    @keyframes slide {
+        from{transform: translateX(0) rotate(0)}
+        to{transform: translateX(0) rotate(-360deg)}
+    }
