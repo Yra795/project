@@ -1,0 +1,12 @@
+/* .header{
+    background-color: rgb(153, 27, 38);
+    border-radius: 80%;
+} */
+
+.contener{
+    flex-direction: column;
+    
+}
+.box{
+    margin: 0.5rem;
+}
