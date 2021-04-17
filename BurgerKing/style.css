@@ -1,0 +1,125 @@
+body {
+    color: #757575;
+    background: #ffffff;
+    font-family: 'open sans', sans-serif;
+}
+
+h1,
+h2, 
+h3, 
+h4,
+h5, 
+h6 {
+    color: #454545;
+    font-family: 'Nunito', sans-serif;
+}
+a {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    color: #fbaf32;
+    transition: .3s;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #719a0a;
+    outline: none;
+    text-decoration: none;
+}
+
+.navbar {
+    position: absolute;
+    width: 100%;
+    padding: 30px 60px;
+    background: transparent !important;
+    z-index: 9;
+    justify-content: space-around;
+}
+.navbar .navbar-brand{
+    color: #fbaf32;
+}
+.navbar .navbar-brand span{
+    color: #719a0a;
+}
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: #fbaf32;
+}
+
+
+.menu{
+    padding: 100px 0;
+}
+.section-header{
+    margin-bottom: 45px;
+}
+.section-header p{
+    color: #719a0a;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.menu .menu-tab .nav.nav-pills .nav-link {
+    color: #ffffff;
+    background: #fbaf32;
+    border-radius: 5px;
+    margin: 0 5px;
+}    
+.menu .menu-tab .nav.nav-pills .nav-link:hover, .menu .menu-tab .nav.nav-pills .nav-link.active {
+    color: #ffffff;
+    background: #719a0a;
+}
+.tab-content{
+    padding: 30px 0 0 0;
+}
+
+.menu .menu-item{
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+.menu .menu-img{
+    width: 80px;
+    margin-right: 20px;
+}
+.menu .menu-img img{
+    width: 100%;
+    border-radius: 100%;
+}
+.menu .menu-text{
+    width: calc(100% - 100px);
+}
+.menu .menu-text h3 span {
+    display: inline-block;
+    float: left;
+    padding-right: 5px;
+    background: #ffffff;
+}
+.menu .menu-text h3 strong {
+    display: inline-block;
+    float: right;
+    padding-left: 5px;
+    color: #fbaf32;
+    background: #ffffff;
+}
+.menu .menu-text p {
+    position: relative;
+    margin: 5px 0 0 0;
+    float: left;
+    display: block;
+}    
+.menu .menu-text h3::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 26px;
+    left: 0;
+    border-top: 2px dotted #cccccc;
+    z-index: -1;
+}
+.menu .menu-tab img {
+    max-width: 100%;
+    border-radius: 15px;
+}
