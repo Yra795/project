@@ -40,54 +40,54 @@ function fib(num){
 
 
 
-var buttons = document.querySelectorAll('button');
+// var buttons = document.querySelectorAll('button');
 
-for (var i = 0; i < buttons.length; i++){
-    buttons[i].onclick = function(x){
-        return function(){
-            console.log(x);
-        }
-    }(i);
-}
-
-
-let passport = [
-{
-    name:"Ivan",
-    lastName:"Ivanov",
-    fatherName:"Ivanovich",
-    birdhdate:"01.01.1970",
-    registrationCountry:"Belarus",
-    registracionCity:"Minsk",
-    registracionAddress:"Lenina st.,21",
-    issuedByDepartment:"Leninsky district police department",
-    dateOfIssue:"",
-    validBefore:"",
-},
-
-{
-    name:"Petia",
-    lastName:"Petrov",
-    fatherName:"Petrovich",
-    birdhdate:"06.09.1990",
-    registrationCountry:"Belarus",
-    registracionCity:"Brest",
-    registracionAddress:"Lenina st.,21",
-    issuedByDepartment:"Leninsky district police department",
-    dateOfIssue:"",
-    validBefore:"",
-}
-];
+// for (var i = 0; i < buttons.length; i++){
+//     buttons[i].onclick = function(x){
+//         return function(){
+//             console.log(x);
+//         }
+//     }(i);
+// }
 
 
-function sortByParam(passportList, paramName){
-    let sortFunc = function(a, b){
-        if (a[paramName] > b[paramName]) {return 1;}
-        if (a[paramName] < b[paramName]) {return -1;}
-        return 0;}
-    return passportList.sort(sortFunc);
-}
-sortByParam(passport, "name"); 
+// let passport = [
+// {
+//     name:"Ivan",
+//     lastName:"Ivanov",
+//     fatherName:"Ivanovich",
+//     birdhdate:"01.01.1970",
+//     registrationCountry:"Belarus",
+//     registracionCity:"Minsk",
+//     registracionAddress:"Lenina st.,21",
+//     issuedByDepartment:"Leninsky district police department",
+//     dateOfIssue:"",
+//     validBefore:"",
+// },
+
+// {
+//     name:"Petia",
+//     lastName:"Petrov",
+//     fatherName:"Petrovich",
+//     birdhdate:"06.09.1990",
+//     registrationCountry:"Belarus",
+//     registracionCity:"Brest",
+//     registracionAddress:"Lenina st.,21",
+//     issuedByDepartment:"Leninsky district police department",
+//     dateOfIssue:"",
+//     validBefore:"",
+// }
+// ];
+
+
+// function sortByParam(passportList, paramName){
+//     let sortFunc = function(a, b){
+//         if (a[paramName] > b[paramName]) {return 1;}
+//         if (a[paramName] < b[paramName]) {return -1;}
+//         return 0;}
+//     return passportList.sort(sortFunc);
+// }
+// sortByParam(passport, "name"); 
 
 
 //  passport.sort(function(a, b){
@@ -95,6 +95,35 @@ sortByParam(passport, "name");
 //     if (a.name < b.name) {return -1;}
 //     return 0;
 // })
-console.log(passport); 
+// console.log(passport); 
 
 
+let reg = /[@]/;
+
+let inp = document.getElementById("email");
+let mes = document.getElementById("message");
+
+document.getElementById("btn").onclick = function (e) {
+    e.preventDefault();
+    if (!validate (reg, inp.value)) {
+        notValid(inp, mes, ' Проверка не пройдена ');
+    } else {
+        valid(inp, mes, '');
+    }
+    
+};
+
+function validate(regex, inp) {
+    return regex.test(inp);
+}
+
+function notValid(inp, el, message) {
+    inp.classList.add('is-invalid');
+    el.innerHTML = message;
+}
+
+function valid(inp, el, message) {
+    inp.classList.remove('is-invalid');
+    inp.classList.add('is-valid');
+    el.innerHTML = message;
+}
