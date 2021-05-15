@@ -10,32 +10,49 @@
 <body>
     <div class="wrapper">
         <div class="btn_wrapper">
-            <label for="">Авторизация</label>
-            <label for="">Регистрация</label>
-        </br></br>
-            <form action="" name="test" id="form">
+            <div class="flex">
+                <button id="btn" class="autoreg active">Авторизация</button>
+                <button id="btn" class="registr">Регистрация</button>
+            </div>
+            </br></br>
+
+            <form action="#" name="test" id="form">
                 <label for="email">Введите Email:</label>
-                <input type="text" name="email" placeholder="Введите Email" id="email">
+            </br>
+                <input type="text" name="email" placeholder="Введите Email" class="_req _email">
+            </br> 
+                <P id="message"></P>  
             </br></br>
                 <label for="password">Введите Пароль:</label>
-                <input type="password" name="password" placeholder="Введите Пароль" id="password">
+            </br>
+                <input type="password" name="password" placeholder="Введите Пароль" class="_req">
+            </br> 
+                <P id="message"></P>
             </br></br>
-                <input type="submit" name="submit" id="authorisation" onclick="valid(document.getElementById('form'))" value="Sing in">
+                <input type="submit" name="submit" id="authorisation" class="btn" value="Войти">
             </form>
 
 
-            <form action="" name="test" id="form" class="del">
+            <div class="del"> 
                 <label for="email">Введите Email:</label>
-                <input type="text" name="email" placeholder="Введите Email" id="email">
+            </br>
+                <input type="text" name="email" placeholder="Введите Email" class="_req _email">
+            </br> 
+                <P id="message"></P>  
             </br></br>
                 <label for="password">Введите Пароль:</label>
-                <input type="password" name="password" placeholder="Введите Пароль" id="password">
+            </br>
+                <input type="password" name="password" placeholder="Введите Пароль" class="_req">
+            </br> 
+                <P id="message"></P>
             </br></br>
                 <label for="rePassword">Повторите Пароль:</label>
-                <input type="rePassword" name="rePassword" placeholder="Повторите Пароль" id="rePassword">
+            </br>
+                <input type="rePassword" name="rePassword" placeholder="Повторите Пароль" class="_req">
             </br></br>
-                <input type="submit" name="submit" id="registration" value="Сheck in">
-            </form>
+                <input type="submit" name="submit" id="registration" class="btn" value="Сheck in">
+            </br></br>
+            </div>
 
         </div>
     </div>

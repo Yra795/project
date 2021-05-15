@@ -3,17 +3,73 @@
 console.log(3)
 
 
-function valid (form){
-    var fail = false;
-    var email = form.email.value;
-    var password = form.password.value;
-    var rePassword = form.rePassword.value;
-    if (email == "")
-        fail ="Не верный email";
-    else if (password == "")
-        fail = "Не верный пароль";
-    else if (rePassword != rePassword)
-        fail = "Пароли не совпадают";
+document.addEventListener('DOMContentLoaded', function () {
+   const form = document.getElementById('form');
+   form.addEventListener('submit', formSend);
+   
+
+    async function formSend(e) {
+       e.preventDefault();
+
+        let error = formValidate(form);
+        let mes = document.getElementById('message');
         
-        alert(fail);
-} 
+        if (error === 0) {
+
+        } else {
+            alert('запомните поля');
+    
+        }
+    }
+
+    function formValidate(form) {
+       let error = 0;
+       let formReq = document.querySelectorAll('._req');
+
+       for (let index = 0; index < formReq.length; index++) {
+           const input = formReq[index];
+           formRemoveError(input);
+
+            if (input.classList.contains('_email')) {
+                if(emailTest(input)) {
+                    formAddError(input);
+                    error++;
+                }
+            } else {
+                if (input.value === ''){
+                    formAddError(input);
+                    error++;
+                }
+            }
+           
+        }
+        return error;
+       
+    }
+
+    function formAddError(input) {
+        input.parentElement.classList.add('_error');
+        input.classList.add('_error');
+    }
+    function formRemoveError(input) {
+        input.parentElement.classList.remove('_error');
+        input.classList.remove('_error');
+    }
+
+    // Функция проверки email
+    function emailTest(input) {
+        return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value); 
+    }
+
+    let btn = document.getElementById('btn');
+        btn.onclick=()=> {
+            btn.classList.remove('active')
+
+            btn.classList.add('active');
+        }
+ 
+
+});
+
+
+
